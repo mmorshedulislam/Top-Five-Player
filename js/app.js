@@ -17,4 +17,18 @@ document
     setInnerTextById("in-total", totalCost);
   });
 
-
+const selectedPlayers = document.getElementsByClassName("selected");
+for (const selectedPlayer of selectedPlayers) {
+  selectedPlayer.addEventListener("click", function (event) {
+    event.stopImmediatePropagation;
+    selectedPlayer.setAttribute("disabled", true);
+    const players = document.getElementsByClassName("player-name");
+    for (const player of players) {
+      function hello(event) {
+        const playerName = player.innerText;
+        console.log(event.target.playerName);
+        return playerName;
+      }
+    }
+  });
+}
