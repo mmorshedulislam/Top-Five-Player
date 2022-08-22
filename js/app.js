@@ -8,6 +8,7 @@ for (const selectedPlayer of selectedPlayers) {
 
 // player select
 const totalPlayers = document.getElementById("total-players");
+
 function playerSelect(playerId) {
   const playerName = document.createElement("li");
   playerName.classList.add("text-white-50");
@@ -16,8 +17,10 @@ function playerSelect(playerId) {
   playerName.innerText = playerNameValue;
   totalPlayers.appendChild(playerName);
 
+  // player count
   const totalPlayersCount =
     document.getElementById("total-players").childElementCount;
+
   if (totalPlayersCount > 5) {
     alert("You have selceted already 5 Players");
     totalPlayers.removeChild(playerName);
@@ -85,5 +88,3 @@ document
       setInputValueById("coach-cost", "");
     }
   });
-
-// validation
