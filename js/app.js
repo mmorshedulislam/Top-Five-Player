@@ -17,18 +17,69 @@ document
     setInnerTextById("in-total", totalCost);
   });
 
+// disable selected player
 const selectedPlayers = document.getElementsByClassName("selected");
 for (const selectedPlayer of selectedPlayers) {
   selectedPlayer.addEventListener("click", function (event) {
     event.stopImmediatePropagation;
     selectedPlayer.setAttribute("disabled", true);
-    const players = document.getElementsByClassName("player-name");
-    for (const player of players) {
-      function hello(event) {
-        const playerName = player.innerText;
-        console.log(event.target.playerName);
-        return playerName;
-      }
-    }
   });
 }
+
+const totalPlayers = document.getElementById("total-players");
+if (totalPlayers.childElementCount >= 5) {
+  alert("you have already selected 5");
+}
+document.getElementById("selected-1").addEventListener("click", function () {
+  const playerName = document.createElement("li");
+  playerName.classList.add("text-white-50");
+  playerName.classList.add("my-3");
+  const playerName1 = getInnerText("player-name-1");
+  playerName.innerText = playerName1;
+  totalPlayers.appendChild(playerName);
+});
+
+document.getElementById("selected-2").addEventListener("click", function () {
+  const playerName = document.createElement("li");
+  playerName.classList.add("text-white-50");
+  playerName.classList.add("my-3");
+  const playerName2 = getInnerText("player-name-2");
+  playerName.innerText = playerName2;
+  totalPlayers.appendChild(playerName);
+});
+
+document.getElementById("selected-3").addEventListener("click", function () {
+  const playerName = document.createElement("li");
+  playerName.classList.add("text-white-50");
+  playerName.classList.add("my-3");
+  const playerName3 = getInnerText("player-name-3");
+  playerName.innerText = playerName3;
+  totalPlayers.appendChild(playerName);
+});
+
+document.getElementById("selected-4").addEventListener("click", function () {
+  const playerName = document.createElement("li");
+  playerName.classList.add("text-white-50");
+  playerName.classList.add("my-3");
+  const playerName4 = getInnerText("player-name-4");
+  playerName.innerText = playerName4;
+  totalPlayers.appendChild(playerName);
+});
+
+document.getElementById("selected-5").addEventListener("click", function () {
+  const playerName2 = document.createElement("li");
+  playerName2.classList.add("text-white-50");
+  playerName2.classList.add("my-3");
+  const playerName5 = getInnerText("player-name-5");
+  playerName2.innerText = playerName5;
+  totalPlayers.appendChild(playerName2);
+});
+
+document.getElementById("selected-6").addEventListener("click", function () {
+  const playerName2 = document.createElement("li");
+  playerName2.classList.add("text-white-50");
+  playerName2.classList.add("my-3");
+  const playerName6 = getInnerText("player-name-6");
+  playerName2.innerText = playerName6;
+  totalPlayers.appendChild(playerName2);
+});

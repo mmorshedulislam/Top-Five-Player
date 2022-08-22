@@ -10,6 +10,11 @@ function getInnerTextById(elementId) {
   return elementValue;
 }
 
+function getInnerText(elementId) {
+  const element = document.getElementById(elementId).innerText;
+  return element;
+}
+
 function setInputValueById(inputId, result) {
   const inputField = (document.getElementById(inputId).value = result);
 }
@@ -17,4 +22,3 @@ function setInputValueById(inputId, result) {
 function setInnerTextById(elementId, result) {
   const element = (document.getElementById(elementId).innerText = result);
 }
-
