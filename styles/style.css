@@ -73,3 +73,7 @@ a:hover{
 ul li{
     color: #ffffff80;
 }
+
+.in-total{
+    color: var(--heading-color);
+}
