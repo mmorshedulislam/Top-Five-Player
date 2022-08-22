@@ -39,11 +39,13 @@
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title fw-bold text-light">Lionel Messi</h5>
+                <h5 class="player-name card-title fw-bold text-light">
+                  Lionel Messi
+                </h5>
                 <p class="card-text text-white-50">36 Goals . 120 Assist</p>
                 <button
                   type="button"
-                  class="btn btn-primary w-100 rounded-0 text-uppercase fw-bold"
+                  class="selected btn btn-primary w-100 rounded-0 text-uppercase fw-bold"
                 >
                   Select
                 </button>
@@ -58,11 +60,13 @@
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title fw-bold text-light">Neymar Jr</h5>
+                <h5 class="player-name card-title fw-bold text-light">
+                  Neymar Jr
+                </h5>
                 <p class="card-text text-white-50">36 Goals . 120 Assist</p>
                 <button
                   type="button"
-                  class="btn btn-primary w-100 rounded-0 text-uppercase fw-bold"
+                  class="selected btn btn-primary w-100 rounded-0 text-uppercase fw-bold"
                 >
                   Select
                 </button>
@@ -77,11 +81,13 @@
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title fw-bold text-light">Kylian Mbappé</h5>
+                <h5 class="player-name card-title fw-bold text-light">
+                  Kylian Mbappé
+                </h5>
                 <p class="card-text text-white-50">36 Goals . 120 Assist</p>
                 <button
                   type="button"
-                  class="btn btn-primary w-100 rounded-0 text-uppercase fw-bold"
+                  class="selected btn btn-primary w-100 rounded-0 text-uppercase fw-bold"
                 >
                   Select
                 </button>
@@ -111,11 +117,13 @@
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title fw-bold text-light">Vítor Machado</h5>
+                <h5 class="player-name card-title fw-bold text-light">
+                  Vítor Machado
+                </h5>
                 <p class="card-text text-white-50">36 Goals . 120 Assist</p>
                 <button
                   type="button"
-                  class="btn btn-primary w-100 rounded-0 text-uppercase fw-bold"
+                  class="selected btn btn-primary w-100 rounded-0 text-uppercase fw-bold"
                 >
                   Select
                 </button>
@@ -130,11 +138,13 @@
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title fw-bold text-light">Sergio Ramos</h5>
+                <h5 class="player-name card-title fw-bold text-light">
+                  Sergio Ramos
+                </h5>
                 <p class="card-text text-white-50">36 Goals . 120 Assist</p>
                 <button
                   type="button"
-                  class="btn btn-primary w-100 rounded-0 text-uppercase fw-bold"
+                  class="selected btn btn-primary w-100 rounded-0 text-uppercase fw-bold"
                 >
                   Select
                 </button>
@@ -149,11 +159,13 @@
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title fw-bold text-light">Renato Sanches</h5>
+                <h5 class="player-name card-title fw-bold text-light">
+                  Renato Sanches
+                </h5>
                 <p class="card-text text-white-50">36 Goals . 120 Assist</p>
                 <button
                   type="button"
-                  class="btn btn-primary w-100 rounded-0 text-uppercase fw-bold"
+                  class="selected btn btn-primary w-100 rounded-0 text-uppercase fw-bold"
                 >
                   Select
                 </button>
@@ -163,26 +175,35 @@
           <div class="col-3">
             <div class="left-side py-4 ps-4">
               <h3 class="text-center">Budget</h3>
-              <div class="form-group row my-4">
-                <label for="inputPassword" style="font-size: 14px;" class="col-sm-4 col-form-label"
+              <div class="form-group row my-4 d-flex justify-content-between">
+                <label
+                  for="inputPassword"
+                  style="font-size: 14px"
+                  class="col-sm-4 col-form-label"
                   >Per Player</label
                 >
                 <div class="col-sm-8">
                   <input
                     type="text"
                     class="w-75 form-control bg-dark text-white rounded-0"
-                    id=""
+                    id="per-player-cost"
                     placeholder=""
                   />
                 </div>
               </div>
               <button
+                id="calculate"
                 type="button"
                 class="btn btn-primary w-75 mx-auto rounded-0 text-uppercase fw-bold"
               >
                 Calculate
               </button>
-              <p class="my-4">Player Expenses: $<span>00</span></p>
+              <div class="d-flex justify-content-between my-4">
+                <p class="">Total Expenses:</p>
+                <p class="me-5">
+                  $<span id="total-expenses" class="">00</span>
+                </p>
+              </div>
               <div class="form-group row my-4">
                 <label for="inputPassword" class="col-sm-4 col-form-label"
                   >Manager</label
@@ -191,7 +212,7 @@
                   <input
                     type="text"
                     class="w-75 form-control bg-dark text-white rounded-0"
-                    id=""
+                    id="manager-cost"
                     placeholder=""
                   />
                 </div>
@@ -204,17 +225,22 @@
                   <input
                     type="text"
                     class="w-75 form-control bg-dark text-white rounded-0"
-                    id=""
+                    id="coach-cost"
                     placeholder=""
                   />
                 </div>
               </div>
               <button
+                id="calculate-total"
                 type="button"
                 class="btn btn-primary w-75 mx-auto rounded-0 text-uppercase fw-bold"
               >
                 Calculate Total
               </button>
+              <div class="d-flex justify-content-between px-2 py-4">
+                <p class="">Total:</p>
+                <p class="me-5">$<span id="in-total" class="">00</span></p>
+              </div>
             </div>
           </div>
         </div>
